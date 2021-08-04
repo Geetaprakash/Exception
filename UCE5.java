@@ -2,13 +2,13 @@ package org.example;
 import org.junit.Test;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-public class UCE2{
-        public static final String Email_Pattern = "^[a-zA-Z0-9]*@[a-zA-Z]+([.][a-zA-Z]+)+$";
-        public boolean validateemail(String email_id) throws URegException{
-            return patterChecker(email_id,Email_Pattern);
+public class UCE5 {
+        public static final String Password_Pattern = "^(?=,*[A-Z]+)(?=,*[A-Z]+)[a-z]{2}";
+        public boolean validatePassword(String password) throws URegException{
+            return patternChecker(password,Password_Pattern);
         }
         @Test
-        private boolean patterChecker(String input,String fieldPattern) throws URegException{
+        private boolean patternChecker(String input,String fieldPattern) throws URegException{
             Pattern pattern=Pattern.compile(fieldPattern);
             Matcher matcher= pattern.matcher(input);
             try {

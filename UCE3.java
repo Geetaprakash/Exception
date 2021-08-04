@@ -2,13 +2,14 @@ package org.example;
 import org.junit.Test;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-public class UCE2{
-        public static final String Email_Pattern = "^[a-zA-Z0-9]*@[a-zA-Z]+([.][a-zA-Z]+)+$";
-        public boolean validateemail(String email_id) throws URegException{
-            return patterChecker(email_id,Email_Pattern);
+
+public class UCE3 {
+        public static final String Name_Pattern = "^[A-Z][a-z]{2}";
+        public boolean validateLName(String lname) throws URegException{
+            return patternChecker(lname,Name_Pattern);
         }
         @Test
-        private boolean patterChecker(String input,String fieldPattern) throws URegException{
+        private boolean patternChecker(String input,String fieldPattern) throws URegException{
             Pattern pattern=Pattern.compile(fieldPattern);
             Matcher matcher= pattern.matcher(input);
             try {
@@ -22,4 +23,3 @@ public class UCE2{
             }
         }
     }
-
